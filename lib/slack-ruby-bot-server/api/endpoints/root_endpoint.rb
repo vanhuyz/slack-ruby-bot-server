@@ -13,7 +13,6 @@ module SlackRubyBotServer
         end
 
         mount StatusEndpoint
-        mount TeamsEndpoint
 
         add_swagger_documentation
       end
