@@ -48,6 +48,14 @@ module SlackRubyBotServer
       oauth_scope&.join('+')
     end
 
+    def activerecord?
+      false
+    end
+
+    def mongoid?
+      true
+    end
+
     reset!
   end
 
