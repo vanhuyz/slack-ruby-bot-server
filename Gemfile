@@ -1,21 +1,21 @@
 source 'https://rubygems.org'
 
-case ENV['DATABASE_ADAPTER']
-when 'mongoid' then
-  gem 'kaminari-mongoid'
-  gem 'mongoid'
-  gem 'mongoid-scroll'
-  gem 'mongoid-shell'
-when 'activerecord' then
-  gem 'activerecord', '~> 5.0.0'
-  gem 'otr-activerecord', '~> 1.2.1'
-  gem 'cursor_pagination' # rubocop:disable Bundler/OrderedGems
-  gem 'pg'
-when nil
-  warn "Missing ENV['DATABASE_ADAPTER']."
-else
-  warn "Invalid ENV['DATABASE_ADAPTER']: #{ENV['DATABASE_ADAPTER']}."
-end
+# case ENV['DATABASE_ADAPTER']
+# when 'mongoid' then
+#   gem 'kaminari-mongoid'
+#   gem 'mongoid'
+#   gem 'mongoid-scroll'
+#   gem 'mongoid-shell'
+# when 'activerecord' then
+#   gem 'activerecord', '~> 5.0.0'
+#   gem 'otr-activerecord', '~> 1.2.1'
+#   gem 'cursor_pagination' # rubocop:disable Bundler/OrderedGems
+#   gem 'pg'
+# when nil
+#   warn "Missing ENV['DATABASE_ADAPTER']."
+# else
+#   warn "Invalid ENV['DATABASE_ADAPTER']: #{ENV['DATABASE_ADAPTER']}."
+# end
 
 gemspec
 
